@@ -29,26 +29,33 @@ const Astronaut = (props) => {
     () =>
       Array(10)
         .fill()
-        .map((_, i) => (i % 2 === 0 ? 1 : -1)),
+        .map((_, i) => (i % 2 === 0 ? 0.4 : -1)),
     []
   );
 
-  const { zRotation } = useSpring({
+  const { zRotation, xPosition } = useSpring({
     from: {
       zRotation: 0,
+      xPosition: 0,
     },
     to: {
       zRotation: -Math.PI / 2,
+      xPosition: 0,
     },
     from: {
       zRotation: -Math.PI / 2,
+      xPosition: 3,
     },
     to: [
       degrees.map((d) => ({
         zRotation: d,
+        xPosition: 3,
       })),
     ],
     loop: true,
+    config: {
+      duration: 500,
+    },
   });
 
   return (
