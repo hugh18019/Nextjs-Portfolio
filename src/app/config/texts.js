@@ -1,2 +1,3 @@
-export const Title = "Hello, I'm ";
-export const Bio = `Dimsum Laurence`;
+export const Title = "Hello, I'm Hui";
+export const Intro = 'Intro goes here';
+export const Bio = `Bio goes here `;
