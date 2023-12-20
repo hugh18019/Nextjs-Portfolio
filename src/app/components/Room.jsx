@@ -2,22 +2,29 @@
 import React, { Suspense, lazy } from 'react';
 import dynamic from 'next/dynamic';
 import { OrbitControls } from '@react-three/drei';
-import { Camera } from 'three';
+import { useLoader } from 'react-three-fiber';
+import { GLTFLoader } from 'three-stdlib';
 const Mesh = dynamic(() => import('./Mesh'), { ssr: false });
 
 const Canvas = lazy(() => import('./Canvas'));
 
 const Room = (props) => {
+  const model = useLoader(GLTFLoader, '/models/room/source/model.gltf');
+
   return (
-    <Canvas>
-      <OrbitControls />
+    <group>
+      {/* <OrbitControls /> */}
       <ambientLight />
-      <orthographicCamera zoom={100} position={[0, 0, 80]} />
-      <Mesh
+      <orthographicCamera zoom={100} position={[0, 0, 25]} />
+      <mesh
+        scale={[1.5, 1.5, 1.5]}
+        position={[0, -1, 0]}
         rotation={[Math.PI / 5, Math.PI / 1.5, 0]}
-        url={'/models/room/source/model.gltf'}
-      />
-    </Canvas>
+      >
+        <primitive object={model.scene} />
+      </mesh>
+      {/* <axesHelper /> */}
+    </group>
   );
 };
 

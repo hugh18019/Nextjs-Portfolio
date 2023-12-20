@@ -2,33 +2,24 @@
 import React, { lazy, Suspense } from 'react';
 import Image from 'next/image';
 
-import Room from './Room';
-
 import { Title, Intro } from '../config/texts';
-import TextAnimation from './animations/TypeAnimation';
-import Astronaut from './Astronaut';
+import AnimatedText from './animations/AnimatedText';
+import AstronautAndPC from './AstronautAndPC';
 
 const Canvas = lazy(() => import('./Canvas'));
 
 const Hero = () => {
   return (
-    <section className='place-self-center mt-10 tranform translate-y-20'>
-      <div className='grid grid-cols-1 lg:grid-cols-12'>
+    <section className='lg:py-16'>
+      <div className='grid grid-cols-1 sm:grid-cols-12'>
         <div className='col-span-8 place-self-center text-center sm:text-left'>
           <h1 className='text-white mb-4 text-4xl lg:text-6xl font-extrabold'>
             {Title}
           </h1>
-          <TextAnimation
-            sequence={['FrontEnd', 1000, 'FullStack', 1000]}
-            wrapper='span'
-            style={{
-              fontColor: 'black',
-              fontSize: '2em',
-              fontWeight: 'bold',
-              display: 'inline-block',
-            }}
-            speed={50}
-            repeat={Infinity}
+          <AnimatedText
+            sequence={['Front End', 'Full Stack']}
+            speed={250}
+            loop={true}
           />
           <h1 className='text-white mt-4 text-4xl lg:text-6xl font-extrabold'>
             Developer
@@ -50,7 +41,7 @@ const Hero = () => {
             <Suspense fallback={'...loading'}>
               <div className=' absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 h-[100%] w-[100%]'>
                 <Canvas>
-                  <Astronaut />
+                  <AstronautAndPC />
                 </Canvas>
               </div>
             </Suspense>

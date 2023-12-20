@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import Navlink from './NavLink';
 import MenuOverlay from './MenuOverlay';
+import Image from 'next/image';
 
 const Navbar = () => {
   const links = ['Logo', 'About', 'Projects', 'Experience'];
@@ -11,12 +12,17 @@ const Navbar = () => {
 
   return (
     <nav className='fixed top-0 left-0 right-0 h-[100px] bg-[#f9d256] z-10 bg-opacity-100'>
-      <div className='flex flex-wrap flex-row items-center justify-between mx-auto p-8 w-[100%]'>
+      <div className='flex flex-wrap flex-row items-center justify-between mx-auto pr-8 pl-8 w-[100%]'>
         <Link
           href={'/'}
           className='text-2xl md:text-5xl text-white font-semibold'
         >
-          LOGO
+          <Image
+            src='/images/logo/jingdouyun.jpg'
+            alt='logo'
+            width={100}
+            height={50}
+          />
         </Link>
         <div
           className='mobile-menu block md:hidden'
@@ -33,10 +39,10 @@ const Navbar = () => {
           )}
         </div>
         <div
-          className='menu hidden flex-col md:block md:w-auto h-[100px] w-[80px]'
+          className='menu hidden flex-col justify-center md:block md:w-auto h-[100px] w-[80px]'
           id='navbar-menu'
         >
-          <ul className='flex Smd:p-0 md:flex-row md:space-x-8 mt-0'>
+          <ul className='flex flex-row h-full justify-end items-center md:p-0 md:flex-row md:space-x-8 mt-0'>
             {links.map((link, i) => (
               <Navlink key={`navlink-${i}`} href={link} title={link} />
             ))}

@@ -18,7 +18,7 @@ const { GLTFLoader } = STDLIB;
 const Mesh = dynamic(() => import('./Mesh'), { ssr: false });
 const Canvas = lazy(() => import('./Canvas'));
 
-const Astronaut = (props) => {
+const AstronautAndPC = (props) => {
   const meshRef = useRef(null);
   const astronaut = useLoader(
     GLTFLoader,
@@ -59,9 +59,9 @@ const Astronaut = (props) => {
   });
 
   return (
-    <group>
-      <OrbitControls />
-      <ambientLight position={[0, 0, 40]} intensity={1} color={'0xffffff'} />
+    <group position={[-0.5, -1, 0]}>
+      {/* <OrbitControls /> */}
+      <ambientLight position={[0, 0, 40]} />
       <orthographicCamera zoom={100} position={[0, 0, 25]} />
       <animated.mesh
         ref={meshRef}
@@ -84,4 +84,4 @@ const Astronaut = (props) => {
   );
 };
 
-export default Astronaut;
+export default AstronautAndPC;

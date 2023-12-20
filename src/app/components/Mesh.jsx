@@ -5,14 +5,13 @@ import React, { forwardRef } from 'react';
 
 const { GLTFLoader } = STDLIB;
 
-const Mesh = forwardRef(function Meshu({ ref, url, ...otherProps }) {
+const Mesh = ({ url, ...otherProps }) => {
   const gltf = useLoader(GLTFLoader, url);
-  console.log('model', gltf);
   return (
-    <mesh ref={ref} {...otherProps}>
+    <mesh {...otherProps}>
       <primitive object={gltf.scene} />
     </mesh>
   );
-});
+};
 
 export default Mesh;
