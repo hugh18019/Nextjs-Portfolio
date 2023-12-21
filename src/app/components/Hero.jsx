@@ -47,7 +47,7 @@ const Hero = () => {
               className='rounded-lg'
             />
             <Suspense fallback={'...loading'}>
-              <div className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 h-3/5 w-3/5 bg-slate-600 rounded-full'>
+              <div className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 h-3/5 w-3/5 bg-slate-900 rounded-full'>
                 <Canvas>
                   <AstronautAndPC />
                 </Canvas>

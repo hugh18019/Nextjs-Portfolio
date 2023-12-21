@@ -99,7 +99,7 @@ const Email = (props) => {
             className='bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full h-20 p-2.5'
           />
           <button
-            className={`bg-[${Colors.backgroundColors.yellow}] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full h-10 p-2.5`}
+            className={`bg-[#f2b26b] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full h-10 p-2.5`}
           >
             <p className='text-center'>{`Send Message`}</p>
           </button>

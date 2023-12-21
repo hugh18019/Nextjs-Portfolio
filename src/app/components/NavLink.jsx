@@ -9,7 +9,7 @@ const Navlink = ({ href, title }) => {
   return (
     <Link
       href={getHref(href)}
-      className='block py-2 pl-3 pr-4 text=[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white'
+      className='block py-2 pl-3 pr-4 text=[#ADB7BE] sm:text-xl rounded md:p-0 text-black font-extrabold font hover:text-slate-200'
     >
       {title}
     </Link>

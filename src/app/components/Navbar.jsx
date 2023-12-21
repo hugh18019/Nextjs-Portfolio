@@ -11,7 +11,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(true);
 
   return (
-    <nav className='fixed top-0 left-0 right-0 h-[100px] bg-[#f9d256] z-10 bg-opacity-100'>
+    <nav className='fixed top-0 left-0 right-0 h-[100px] bg-[#f2b26b] z-10 bg-opacity-100'>
       <div className='flex flex-wrap flex-row items-center justify-between mx-auto pr-8 pl-8 w-[100%]'>
         <Link
           href={'/'}
