@@ -9,11 +9,12 @@ import AstronautAndPC from './AstronautAndPC';
 const Canvas = lazy(() => import('./Canvas'));
 
 const Hero = () => {
+  const heroImg = '/images/logo/jingdouyun.jpg';
   return (
-    <section className='lg:py-16'>
+    <section id='top' className='lg:py-16'>
       <div className='grid grid-cols-1 sm:grid-cols-12'>
-        <div className='col-span-8 place-self-center text-center sm:text-left'>
-          <h1 className='text-white mb-4 text-4xl lg:text-6xl font-extrabold'>
+        <div className='col-span-8 place-self-center text-center sm:text-left sm:justify-self-start'>
+          <h1 className='text-white mb-4 sm:text-4xl lg:text-8xl lg:leading-normal font-extrabold'>
             {Title}
           </h1>
           <AnimatedText
@@ -37,9 +38,16 @@ const Hero = () => {
           </div>
         </div>
         <div className='col-span-4 mt-4 lg:mt-0 place-self-center'>
-          <div className='squared-full place-self-center place-content-center h-[600px] w-[600px] lg:w-[600px] lg:h-[600px] relative'>
+          <div className='squared-full place-self-center place-content-center h-[600px] w-[600px] lg:w-[600px] lg:h-[600px] relative rounded-lg bg-[#bc5e6c]'>
+            <Image
+              src='/images/logo/jingdouyun.jpg'
+              width={200}
+              height={200}
+              alt='backdrop'
+              className='rounded-lg'
+            />
             <Suspense fallback={'...loading'}>
-              <div className=' absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 h-[100%] w-[100%]'>
+              <div className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 h-3/5 w-3/5 bg-slate-600 rounded-full'>
                 <Canvas>
                   <AstronautAndPC />
                 </Canvas>

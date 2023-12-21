@@ -11,13 +11,12 @@ const getTabContent = (activeTab) => {
   return (
     <ul className='list-disc pl-2'>
       {activeTab.content.split(',').map((c, i) => (
-        <li
+        <div
           key={i}
-          // className={`mr-3 font-semibold ${className} hover:text-white no-underline`}
-          className='no-underline text-black'
+          className='min-w-[100px] w-fit  text-left bg-[#18191E] text-[#ADB7BE] rounded-r-lg mb-2 pl-2 pr-6'
         >
-          {c}
-        </li>
+          <li className='no-underline hover:text-white'>{c}</li>
+        </div>
       ))}
     </ul>
   );
@@ -27,7 +26,7 @@ const tabs = [
   {
     name: 'Skills',
     content:
-      'React.js, Next.js, Javascript, Node.js, Express.js, MongoDB, Mongoose, MySQL, Python',
+      'React.js, Next.js, Javascript, Three.js, Node.js, Express.js, MongoDB, Mongoose, MySQL, Python, C++',
   },
   {
     name: 'Education',
@@ -48,18 +47,20 @@ const About = (props) => {
   };
 
   return (
-    <section className='text-white' id='about-section'>
-      <div className='grid grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
-        {/* <div className='flex items-center justify-center '> */}
-        <Suspense fallback={'...loading'}>
-          <Canvas>
-            <Room />
-          </Canvas>
-        </Suspense>
-        {/* </div> */}
-        <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
+    <section id='about' className='text-white'>
+      <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
+        <div className='w-[650px] h-[500px] flex flex-col justify-center items-center'>
+          <Suspense fallback={'...loading'}>
+            <Canvas>
+              <Room />
+            </Canvas>
+          </Suspense>
+        </div>
+        <div className='mt-4 md:mt-0 text-left flex flex-col h-full z-6'>
           <h2 className='text-4xl font-bold text-black mt-8'>About</h2>
-          <p className='text-base lg:text-lg'>{Bio}</p>
+          <p className='text-left text-base sm:mt-4 bg-[#18191E] text-[#ADB7BE] rounded-lg lg:text-lg p-6'>
+            {Bio}
+          </p>
           <div className='flex flex-row justify-start mt-8'>
             <ul>
               {tabs.map((tab, i) => (

@@ -59,14 +59,14 @@ const AstronautAndPC = (props) => {
   });
 
   return (
-    <group position={[-0.5, -1, 0]}>
+    <group position={[0, -1, 0]} scale={[1.5, 1.5, 1.5]}>
       {/* <OrbitControls /> */}
       <ambientLight position={[0, 0, 40]} />
       <orthographicCamera zoom={100} position={[0, 0, 25]} />
       <animated.mesh
         ref={meshRef}
         scale={[6, 6, 6]}
-        position={[-1.5, 0.5, 0]}
+        position={[-1, 0.5, 0]}
         rotation={[0, -Math.PI / 9, 0]}
         rotation-z={zRotation}
       >
@@ -74,12 +74,12 @@ const AstronautAndPC = (props) => {
       </animated.mesh>
       <animated.mesh
         scale={[3, 3, 3]}
-        position={[-0.25, 0, 0.5]}
+        position={[0.5, 0, 0.5]}
         rotation={[0, -Math.PI - Math.PI / 10, 0]}
       >
         <primitive object={pc.scene} />
       </animated.mesh>
-      <axesHelper />
+      {/* <axesHelper /> */}
     </group>
   );
 };

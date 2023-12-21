@@ -6,8 +6,6 @@ import { useLoader } from 'react-three-fiber';
 import { GLTFLoader } from 'three-stdlib';
 const Mesh = dynamic(() => import('./Mesh'), { ssr: false });
 
-const Canvas = lazy(() => import('./Canvas'));
-
 const Room = (props) => {
   const model = useLoader(GLTFLoader, '/models/room/source/model.gltf');
 
@@ -18,7 +16,7 @@ const Room = (props) => {
       <orthographicCamera zoom={100} position={[0, 0, 25]} />
       <mesh
         scale={[1.5, 1.5, 1.5]}
-        position={[0, -1, 0]}
+        position={[-1.5, 0, 0]}
         rotation={[Math.PI / 5, Math.PI / 1.5, 0]}
       >
         <primitive object={model.scene} />

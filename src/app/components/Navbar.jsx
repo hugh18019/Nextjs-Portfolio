@@ -7,7 +7,7 @@ import MenuOverlay from './MenuOverlay';
 import Image from 'next/image';
 
 const Navbar = () => {
-  const links = ['Logo', 'About', 'Projects', 'Experience'];
+  const links = ['Top', 'About', 'Projects', 'Connect'];
   const [open, setOpen] = useState(true);
 
   return (
@@ -17,12 +17,7 @@ const Navbar = () => {
           href={'/'}
           className='text-2xl md:text-5xl text-white font-semibold'
         >
-          <Image
-            src='/images/logo/jingdouyun.jpg'
-            alt='logo'
-            width={100}
-            height={50}
-          />
+          {/* <Image src='' alt='logo' width={100} height={50} /> */}
         </Link>
         <div
           className='mobile-menu block md:hidden'

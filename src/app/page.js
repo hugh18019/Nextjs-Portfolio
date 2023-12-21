@@ -11,10 +11,10 @@ import Email from './components/Email';
 export default function Home() {
   return (
     <main
-      className={`flex min-h-screen bg-[${Colors.backgroundColors.grey}] flex-col justify-between items-center container mx-auto relative`}
+      className={`flex min-h-screen bg-[${Colors.backgroundColors.grey}] flex-col`}
     >
       <Navbar />
-      <div className='container mt-24 mx-auto px-12 py-4'>
+      <div className='container mt-24 mx-auto px-12 py-4 gap-40'>
         <Hero />
         <About />
         <Projects />

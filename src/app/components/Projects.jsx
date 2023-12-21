@@ -24,8 +24,8 @@ const Projects = () => {
     );
 
   return (
-    <>
-      <h2 className='text-center text-4xl font-bold text-black mt-8 '>
+    <section id='projects'>
+      <h2 className='text-center text-4xl font-bold text-black mt-8'>
         My Projects
       </h2>
       <div className='w-full flex flex-row justify-center items-center text-black gap-2 py-6'>
@@ -39,8 +39,13 @@ const Projects = () => {
           onClick={onClick}
           isSelected={active === 'Web'}
         />
+        <ProjectTag
+          name={'Python'}
+          onClick={onClick}
+          isSelected={active === 'Python'}
+        />
       </div>
-      <div className='grid md:grid-cols-3 gap-8 md:gap-12'>
+      <div className='grid md:grid-cols-2 gap-6 md:gap-8'>
         {ProjectsData.map((project, i) => (
           <ProjectCard
             key={i}
@@ -53,7 +58,7 @@ const Projects = () => {
           />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
