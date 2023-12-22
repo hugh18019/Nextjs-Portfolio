@@ -45,7 +45,7 @@ const Projects = () => {
           isSelected={active === 'Python'}
         />
       </div>
-      <div className='grid md:grid-cols-2 gap-6 md:gap-8'>
+      <div className='grid md:grid-cols-3 gap-6 md:gap-8'>
         {ProjectsData.map((project, i) => (
           <ProjectCard
             key={i}
