@@ -45,7 +45,7 @@ const Email = (props) => {
           <div className='message w-full flex flex-row justify-start gap-2'>
             <p className='text-[#ADB7BE] mb-4 max-w-md'>
               {/* {''} */}
-              {`I'm currently looking for new opportunities.`}
+              {`Feel free to send me a message.`}
             </p>
           </div>
         </div>

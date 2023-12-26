@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <section id='top' className='lg:py-16'>
       <div className='grid grid-cols-1 sm:grid-cols-12'>
-        <div className='col-span-8 place-self-center text-center sm:text-left sm:justify-self-start'>
+        <div className='col-span-7 place-self-center text-center sm:text-left sm:justify-self-start'>
           <h1 className='text-white mb-4 sm:text-4xl lg:text-8xl lg:leading-normal font-extrabold'>
             {Title}
           </h1>
@@ -33,7 +33,7 @@ const Hero = () => {
           <h1 className='text-white mt-4 text-4xl lg:text-6xl font-extrabold'>
             Developer
           </h1>
-          <p className='text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6'>
+          <p className='flex flex-wrap text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6 mt-6'>
             {Intro}
           </p>
           <div>
@@ -47,12 +47,12 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className='col-span-4 mt-4 lg:mt-0 place-self-center'>
-          <div className='squared-full place-self-center place-content-center h-[600px] w-[600px] lg:w-[600px] lg:h-[600px] relative rounded-lg bg-[#bc5e6c]'>
+        <div className='col-span-5 mt-4 lg:mt-0 place-self-center'>
+          <div className='squared-full place-self-center place-content-center h-[500px] w-[500px] lg:w-[500px] lg:h-[500px] relative rounded-lg bg-[#bc5e6c]'>
             <Image
               src='/images/logo/jingdouyun.jpg'
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               alt='backdrop'
               className='rounded-lg'
             />

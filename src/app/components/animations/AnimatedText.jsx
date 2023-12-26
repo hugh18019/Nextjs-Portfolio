@@ -46,7 +46,7 @@ const AnimatedText = ({ sequence, speed }) => {
   const handleToggleAnimationState = () => setStop(!stop);
 
   return (
-    <span className='flex flex-row justify-start'>
+    <span className='flex flex-row justify-center sm:justify-start'>
       <button
         className='w-[50px] h-[50px] hover:bg-black rounded-lg bg-black'
         onClick={handleToggleAnimationState}
