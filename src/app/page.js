@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import Hero from './components/Hero';
-import Rectangle from './components/ui_components/Rectangle';
 import About from './components/About';
 import Navbar from './components/Navbar';
 import Colors from './config/colors';

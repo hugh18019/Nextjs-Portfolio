@@ -1,9 +1,11 @@
 import Link from 'next/link';
 
 const Navlink = ({ href, title }) => {
-  const getHref = (title) =>
-    `#${title.split().map((char, i) => (i === 0 ? char.toLowerCase() : char))}`;
-
+  const getHref = (title) => {
+    const href = `#${title.split().map((char, i) => (i === 0 ? char.toLowerCase() : char))}`
+    console.log("href", href)
+    return href
+  }
   // console.log('href', href);
 
   return (

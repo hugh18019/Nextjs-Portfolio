@@ -44,6 +44,11 @@ const Projects = () => {
           onClick={onClick}
           isSelected={active === 'Python'}
         />
+        <ProjectTag
+          name={"C/C++"}
+          onClick={onClick}
+          isSelected={active === "C/C++"}
+        />
       </div>
       <div className='grid md:grid-cols-3 gap-6 md:gap-8'>
         {ProjectsData.map((project, i) => (

@@ -21,15 +21,33 @@ export const ProjectsData = [
     previewUrl: 'https://wordle-beige-chi.vercel.app/',
     tags: ['All', 'Web'],
   },
-  // {
-  //   title: "Dijkstra's Shortest Path",
-  //   description:
-  //     "A python program for computing shortest paths using the adjacency list implementation of the Dijkstra's Algorithm",
-  //   image: '',
-  //   gitUrl: '',
-  //   previewUrl: '',
-  //   tags: ['All', 'Python'],
-  // },
+  {
+    title: "Linux Shell Clone",
+    description:
+      "A C program that mimics the behaviors of the shell found on Linux operating systems",
+    image: '/images/projects/linux_shell.jpg',
+    gitUrl: '',
+    previewUrl: '',
+    tags: ['All', 'C/C++'],
+  },
+  {
+    title: "String Counter",
+    description:
+      "A C++ program for computing the number of strings satisfying a condition using dynamic programming concepts.",
+    image: '/images/projects/string_counter.jpg',
+    gitUrl: '',
+    previewUrl: '',
+    tags: ['All', 'C/C++'],
+  },
+  {
+    title: "Dijkstra's Shortest Path",
+    description:
+      "A python program for computing shortest paths using the adjacency list implementation of the Dijkstra's Algorithm",
+    image: '/images/projects/dijkstra_shortest_path.jpeg',
+    gitUrl: '',
+    previewUrl: 'https://github.com/Don-t-Team/Dijkstra_Shortest_Path',
+    tags: ['All', 'Python'],
+  },
   {
     title: 'Portfolio',
     description:

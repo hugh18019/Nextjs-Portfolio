@@ -37,9 +37,11 @@ const Hero = () => {
             {Intro}
           </p>
           <div>
+            <Link href='#connect'>
             <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-6 mb-6 bg-white hover:bg-slate-600 lg:mt-0'>
-              <span>Hire Me</span>
+              <span>Hire</span>
             </button>
+            </Link>
             <Link href='https://drive.google.com/file/d/1lxPYCj58dMDWL3P_7wxIiRLMQxpGYGH0/view?usp=sharing'>
               <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-6 mb-6 bg-slate-600 hover:bg-white lg:mt-0'>
                 <span>Download CV</span>
