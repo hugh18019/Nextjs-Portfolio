@@ -22,30 +22,30 @@ export const ProjectsData = [
     tags: ['All', 'Web'],
   },
   {
-    title: "Linux Shell Clone",
+    title: "Tic Tac Toe",
     description:
-      "A C program that mimics the behaviors of the shell found on Linux operating systems",
+      "A simple AI game built with PyGame.",
     image: '/images/projects/linux_shell.jpg',
-    gitUrl: '',
-    previewUrl: '',
-    tags: ['All', 'C/C++'],
+    gitUrl: 'https://github.com/hugh18019/TicTacToe',
+    previewUrl: 'https://github.com/hugh18019/TicTacToe',
+    tags: ['All', 'Python'],
   },
   {
     title: "String Counter",
     description:
       "A C++ program for computing the number of strings satisfying a condition using dynamic programming concepts.",
     image: '/images/projects/string_counter.jpg',
-    gitUrl: '',
-    previewUrl: '',
-    tags: ['All', 'C/C++'],
+    gitUrl: 'https://github.com/hugh18019/String-Counter',
+    previewUrl: 'https://github.com/hugh18019/String-Counter',
+    tags: ['All', 'C++'],
   },
   {
     title: "Dijkstra's Shortest Path",
     description:
       "A python program for computing shortest paths using the adjacency list implementation of the Dijkstra's Algorithm",
     image: '/images/projects/dijkstra_shortest_path.jpeg',
-    gitUrl: '',
-    previewUrl: 'https://github.com/Don-t-Team/Dijkstra_Shortest_Path',
+    gitUrl: 'https://github.com/hugh18019/Dijkstra_Shortest_Path',
+    previewUrl: 'https://github.com/hugh18019/Dijkstra_Shortest_Path',
     tags: ['All', 'Python'],
   },
   {

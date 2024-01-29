@@ -45,9 +45,9 @@ const Projects = () => {
           isSelected={active === 'Python'}
         />
         <ProjectTag
-          name={"C/C++"}
+          name={"C++"}
           onClick={onClick}
-          isSelected={active === "C/C++"}
+          isSelected={active === "C++"}
         />
       </div>
       <div className='grid md:grid-cols-3 gap-6 md:gap-8'>
